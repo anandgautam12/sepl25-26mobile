@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SEPL 2025-26 Fixture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SEPL MAIN LOGO -->
+  <div style="text-align:center;margin-bottom:20px">
+    <img src="sepl.jpg" style="height:120px;">
+  </div>
+
+  <h1>SEPL 2025-26 — Full Fixture</h1>
+
+  <!-- TEAM BUTTONS WITH LOGOS -->
+  <div class="team-buttons">
+
+    <button onclick="showTeam('all')">
+      <img src="sepl.jpg">
+      
+    </button>
+
+    <button onclick="showTeam('Satpuda Super Kings')">
+      <img src="superkings.jpg">
+
+    </button>
+
+    <button onclick="showTeam('Satpuda Royals')">
+      <img src="royals.jpg">
+      
+    </button>
+
+    <button onclick="showTeam('Satpuda Panthers')">
+      <img src="panthers.jpg">
+
+    </button>
+
+    <button onclick="showTeam('Satpuda Blasters')">
+      <img src="blasters.jpg">
+     
+    </button>
+
+    <button onclick="showTeam('Satpuda Warriors')">
+      <img src="warriors.jpg">
+     
+    </button>
+
+    <button onclick="showTeam('Satpuda Strikers')">
+      <img src="strikers.jpg">
+     
+    </button>
+
+  </div>
+
+  <!-- FIXTURE TABLE -->
+  <table id="fixtureTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Match</th>
+        <th>Venue</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
