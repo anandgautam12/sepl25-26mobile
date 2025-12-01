@@ -1,16 +1,17 @@
 /* -------------------------------
-   SEPL FIXTURE • FINAL CSS
-   Round Logo Buttons (No Text)
-   Mobile Friendly + Premium UI
+   SEPL FIXTURE • PREMIUM COLOR UPGRADE
+   Neon Blue + Purple Glow Theme
 -------------------------------- */
 
 :root{
-  --bg:#071126;          /* main dark background */
-  --bg2:#0e1f3a;         /* gradient shade */
-  --text:#e7efff;        /* normal text */
-  --muted:#b8c8ef;       /* lighter text */
-  --accent:#00e1ff;      /* cyan glow */
-  --card:rgba(255,255,255,0.04);
+  --bg:#050a1a;                       /* dark blue */
+  --bg2:#0c1430;                       /* soft navy */
+  --text:#eaf2ff;                      /* smooth white */
+  --muted:#b7c7ff;                     /* pastel blue */
+  --accent:#4effff;                    /* neon cyan */
+  --accent2:#8f5bff;                   /* neon purple */
+  --card:rgba(255,255,255,0.05);
+  --glass:rgba(255,255,255,0.07);
 }
 
 /* Reset */
@@ -19,7 +20,14 @@ body{
   margin:0;
   font-family: Inter, Arial, sans-serif;
   color:var(--text);
-  background:linear-gradient(180deg,var(--bg),var(--bg2));
+
+  /* UPGRADED GRADIENT */
+  background:linear-gradient(180deg,
+    #040817 0%,
+    #0b1b3a 40%,
+    #130d33 100%
+  );
+
   -webkit-font-smoothing:antialiased;
 }
 
@@ -33,9 +41,13 @@ body{
 /* Title */
 h1{
   text-align:center;
-  font-size:22px;
-  margin:10px 0 16px;
-  color:var(--text);
+  font-size:24px;
+  margin:10px 0 18px;
+  color:#d9e4ff;
+  letter-spacing:1px;
+
+  /* glow */
+  text-shadow:0 0 10px rgba(78,255,255,0.5);
 }
 
 /* -------------------------------
@@ -59,23 +71,35 @@ h1{
   border-radius:50%;
   border:none;
   padding:0;
-  background:rgba(255,255,255,0.05);
+
+  /* GLASS + GLOW */
+  background:linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03));
+  backdrop-filter: blur(6px);
+
   display:flex;
   align-items:center;
   justify-content:center;
   cursor:pointer;
-  transition:transform .15s ease, box-shadow .15s ease;
-  box-shadow:0 0 10px rgba(0,0,0,0.35);
-  backdrop-filter: blur(3px);
+
+  transition:transform .18s ease, box-shadow .18s ease;
+
+  /* outer glow */
+  box-shadow:
+    0 0 12px rgba(0,0,0,0.4),
+    0 0 18px rgba(80,160,255,0.25);
 }
 
 /* Hover animation */
 .team-buttons button:hover{
-  transform:scale(1.12);
-  box-shadow:0 0 20px rgba(0,225,255,0.6);
+  transform:scale(1.16);
+
+  /* neon dual glow */
+  box-shadow:
+    0 0 25px rgba(78,255,255,0.7),
+    0 0 35px rgba(143,91,255,0.5);
 }
 
-/* Circle Logos */
+/* Logos */
 .team-buttons img{
   width:50px;
   height:50px;
@@ -89,6 +113,14 @@ h1{
    FIXTURE TABLE
 --------------------------------*/
 
+.table-wrap{
+  overflow:auto;
+  border-radius:12px;
+  background:rgba(255,255,255,0.03);
+  box-shadow:0 0 25px rgba(0,0,0,0.35);
+  backdrop-filter:blur(4px);
+}
+
 table{
   width:100%;
   border-collapse:collapse;
@@ -97,33 +129,32 @@ table{
 }
 
 thead th{
-  background:rgba(255,255,255,0.07);
+  background:linear-gradient(90deg, rgba(143,91,255,0.2), rgba(78,255,255,0.18));
   padding:12px;
   text-align:left;
   font-weight:800;
-  color:var(--muted);
+  color:#d2deff;
+  letter-spacing:0.5px;
 }
 
 tbody td{
   padding:12px;
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.06);
   color:var(--text);
 }
 
+/* even row glass look */
 tbody tr:nth-child(even) td{
-  background:rgba(255,255,255,0.03);
+  background:rgba(255,255,255,0.04);
 }
 
 /* Highlight */
 .highlight{
-  background:linear-gradient(90deg,rgba(0,225,255,0.10),rgba(0,225,255,0.03));
+  background:linear-gradient(90deg,
+    rgba(78,255,255,0.18),
+    rgba(143,91,255,0.15)
+  );
   border-left:4px solid var(--accent);
-}
-
-/* Scroll container for small screens */
-.table-wrap{
-  overflow:auto;
-  border-radius:10px;
 }
 
 /* -------------------------------
@@ -137,11 +168,12 @@ tbody tr:nth-child(even) td{
 
   tbody tr{
     display:block;
-    background:var(--card);
+    background:linear-gradient(145deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
     padding:12px;
     margin-bottom:14px;
     border-radius:12px;
     box-shadow:0 4px 20px rgba(0,0,0,0.35);
+    backdrop-filter:blur(4px);
   }
 
   tbody td{
@@ -159,11 +191,11 @@ tbody tr:nth-child(even) td{
     min-width:90px;
   }
 
-  /* mobile button size adjust */
   .team-buttons button{
     width:55px;
     height:55px;
   }
+
   .team-buttons img{
     width:42px;
     height:42px;
@@ -174,7 +206,7 @@ tbody tr:nth-child(even) td{
 /* Extra Small Devices */
 @media (max-width:360px){
   .container{ padding:10px }
-  h1{ font-size:18px }
+  h1{ font-size:20px }
   .team-buttons button{
     width:50px;
     height:50px;
