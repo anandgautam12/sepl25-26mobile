@@ -1,75 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SEPL 2025-26 Fixture</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>SEPL 2025–26 Fixture</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<h1 class="main-title">
+    SEPL 2025–26
+    <span>OFFICIAL MATCH FIXTURE</span>
+</h1>
 
-  <!-- SEPL MAIN LOGO -->
-  <div style="text-align:center;margin-bottom:20px">
-    <img src="sepl.jpg" style="height:120px;">
-  </div>
+<h2 class="section-title">OTHER MATCHES</h2>
+<div id="matches" class="grid"></div>
 
-  <h1>SEPL 2025-26 — Full Fixture</h1>
-
-  <!-- TEAM BUTTONS WITH LOGOS -->
-  <div class="team-buttons">
-
-    <button onclick="showTeam('all')">
-      <img src="sepl.jpg">
-      
-    </button>
-
-    <button onclick="showTeam('Satpuda Super Kings')">
-      <img src="superkings.jpg">
-
-    </button>
-
-    <button onclick="showTeam('Satpuda Royals')">
-      <img src="royals.jpg">
-      
-    </button>
-
-    <button onclick="showTeam('Satpuda Panthers')">
-      <img src="panthers.jpg">
-
-    </button>
-
-    <button onclick="showTeam('Satpuda Blasters')">
-      <img src="blasters.jpg">
-     
-    </button>
-
-    <button onclick="showTeam('Satpuda Warriors')">
-      <img src="warriors.jpg">
-     
-    </button>
-
-    <button onclick="showTeam('Satpuda Strikers')">
-      <img src="strikers.jpg">
-     
-    </button>
-
-  </div>
-
-  <!-- FIXTURE TABLE -->
-  <table id="fixtureTable">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Date</th>
-        <th>Match</th>
-        <th>Venue</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
-
-</div>
+<h2 class="section-title blasters-title">SATPUDA BLASTERS MATCHES</h2>
+<div id="blasters" class="grid"></div>
 
 <script src="script.js"></script>
 </body>
